@@ -17,7 +17,9 @@ $ cd mutual-auth
 $ chmod 755 run.sh
 $ ./run.sh
 
-curl -k -E keystore/serviceA.p12:alfresco --cert-type PEM -H "Content-Type: application/json" -X POST -d '{ "auth_user": "admin"}'  https://localhost:8443/alfresco/service/auth/mutual
+curl -k -E keystore/serviceA.p12:alfresco --cert-type PEM \
+-H "Content-Type: application/json" -X POST -d '{ "auth_user": "admin"}'  \
+https://localhost:8443/alfresco/service/auth/mutual
 ```
 A successful Response will be as follows:
 ```json
