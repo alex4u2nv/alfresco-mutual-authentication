@@ -36,6 +36,7 @@ A successful Response will be as follows:
 #### Instructions
 - Install amp into alfresco.war using alfresco-mmt.jar
 - Install client certificates and CA that it was signed with (if any) into your application container's truststore
+- Add user info to tomcat/conf/tomcat-users.xml, for example:   <user username="CN=serviceA, OU=Consulting, O=Alfresco Software Ltd., L=Atlanta, ST=GA, C=US" roles="repoclient" password="null"/>
 - Restart Alfresco
 - Create a service account in Alfresco with that of the CN used in your Client Certificate
 - Configure Service Application to send your Client Certificate when a called service requests it
@@ -60,8 +61,8 @@ mutual.service.sudo.allow=true
 ```
 
 ### Todo's
-Update documentation
-Develop X509 Certificate Handler (So that Client-Auth Users could be handled outside of Tomcat)
+* Update documentation
+* Develop X509 Certificate Handler (So that Client-Auth Users could be handled outside of Tomcat)
 
 [1]:https://www.digicert.com/code-signing/java-code-signing-guide.htm
 [2]:http://docs.oracle.com/cd/E19798-01/821-1841/bncbt/index.html
