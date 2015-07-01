@@ -1,0 +1,25 @@
+<webscript>
+    <shortname>Two way mutual authentication</shortname>
+    <description>
+        <![CDATA[
+        This service allows for two way mutual authentication.
+        Once two way handshake is completed, and confirmed, it will deliver an authentication
+        ticket to use with further service requests.
+
+        example payload to run service as a specific user:
+        {
+          auth_user: "username"
+        }
+
+        example output:
+        {
+            "output" : "ticket_ablck23lk23l",
+            "status" : 200
+        }
+   ]]>
+    </description>
+    <url>/auth/mutual</url>
+    <format default="json">argument</format>
+    <authentication>none</authentication>
+    <transaction>required</transaction>
+</webscript>
