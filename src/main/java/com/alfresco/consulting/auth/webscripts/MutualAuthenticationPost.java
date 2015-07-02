@@ -24,31 +24,6 @@ import java.io.IOException;
 /**
  * Created by alexmahabir on 11/19/14.
  * This service supports the ability to authenticate to alfresco via client-cert authentication.
- * The following configurations should be in your web.xml
- * <p/>
- * <security-constraint>
- * <web-resource-collection>
- * <web-resource-name>MUTUAL</web-resource-name>
- * <url-pattern>/service/auth/mutual</url-pattern>
- * </web-resource-collection>
- * <p/>
- * <auth-constraint>
- * <role-name>repoclient</role-name>
- * </auth-constraint>
- * <p/>
- * <user-data-constraint>
- * <transport-guarantee>CONFIDENTIAL</transport-guarantee>
- * </user-data-constraint>
- * </security-constraint>
- * <p/>
- * <login-config>
- * <auth-method>CLIENT-CERT</auth-method>
- * <realm-name>Repository</realm-name>
- * </login-config>
- * <p/>
- * <security-role>
- * <role-name>repoclient</role-name>
- * </security-role>
  */
 public class MutualAuthenticationPost extends AbstractWebScript {
 
